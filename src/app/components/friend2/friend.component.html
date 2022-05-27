@@ -1,41 +1,19 @@
-<!--<p>Friend's information:
-  name ={{ friend.name }},
-  email = {{ friend.email }},
-  age = {{ friend.age }}
-</p>
-
-<p>{{ friend | json}}</p>
-<p>{{ friend.name | uppercase }}</p>
-<p>{{ friend.name | lowercase }}</p>
--->
-<h1>Friend Form</h1>
+<h1 style="height: 10px;"></h1>
+<h1><div class="font">Friend Form</div></h1>
 <form [formGroup]="friendForm">
   <div *ngIf="!isFriendAdded">
     <div class="field">
-      <label> FriendName : </label>
-      <!-- <input formControlName="name"> -->
-      <!--input [ngModel]="friend.name" formControlName="FriendName" name="fname">-->
-      <input [(ngModel)]="newFriend.name" formControlName="name">
-    </div>
-    <div class="field">
-      <label> Email : </label>
-      <!-- <input formControlName="email"> -->
-      <!-- <input [ngModel]="friend.email" formControlName="FriendEmail"> -->
-      <input [(ngModel)]="newFriend.email" formControlName="email">
-    </div>
-    <div class="field">
-      <label> Age : </label>
-      <!-- <input formControlName="age"> -->
-      <!-- <input [ngModel]="friend.age" formControlName="FriendAge"> -->
-      <input [(ngModel)]="newFriend.age" formControlName="age">
+      <select id = "term">
+        <option value = "2564-1"><div class="font">2564-1</div></option>
+        <option value = "2564-2"><div class="font">2564-2</div></option>
+    </select>
     </div>
 
-    <div *ngIf="!editFriend">
-      <button class="button is-success" [disabled]="friendForm.invalid" type="submit" (click)="addFriend()">Add New Friend</button>
+
+    <div *ngIf="!editFriend" >
+      <button class="button is-success" [disabled]="friendForm.invalid" type="submit" (click)="addFriend()"><div class="font">เพิ่มวิชาเรียน</div></button>
     </div>
-    <div *ngIf="editFriend">
-      <button class="button is-success" (click)="updateAFriend()">Update this Friend</button>
-    </div>
+
   </div>
 
   <div *ngIf="isFriendAdded">
@@ -44,25 +22,11 @@
   </div>
 
 </form>
-<!--
-<p><b>Retrieve values from the form: </b> <br/>
-  {{ friendForm.value | json }}  <br/>
-  {{ friendForm.get('FriendName')?.value }} <br/>
-  {{ friendForm.get('FriendEmail')?.value }}  <br/>
-  {{ friendForm.get('FriendAge')?.value }}
-</p>
-
-<p><b>Retrieve values from the data model:</b> <br/>
-  {{ friend.name }} <br/>
-  {{ friend.email }} <br/>
-  {{ friend.age }}
-</p>
--->
 
 <table>
   <thead>
     <tr>
-      <th>#</th><th>Name</th><th>Email</th><th>Age</th><th>Action</th>
+      <th>#</th><th>รหัสวิชา</th><th>ชื่อวิชา</th><th>ตอนเรียน</th><th>ปีการศึกษา</th>
     </tr>
   </thead>
 

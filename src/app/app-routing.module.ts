@@ -5,8 +5,8 @@ import { FriendStudentComponent } from './components/friend1/friend.component';
 import { FriendTeacherComponent } from './components/friend2/friend.component';
 
 const routes: Routes = [
-  { path: 'Form-and-Data-Model', component: FriendStudentComponent},
-  { path: 'Form-and-Data-Model', component: FriendTeacherComponent}
+  { path: 'Form-and-Data-Model1', component: FriendStudentComponent},
+  { path: 'Form-and-Data-Model2', component: FriendTeacherComponent}
 ];
 
 @NgModule({
